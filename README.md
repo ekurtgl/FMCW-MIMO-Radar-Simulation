@@ -7,40 +7,56 @@
 TX (blue) - RX (red) antenna positions:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/66868163/185649842-fd3723d2-e444-442b-b846-ab9e09415674.png">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185649842-fd3723d2-e444-442b-b846-ab9e09415674.png">
 </p>
 
 Transmitted, received and downconverted signals:
 
-![fig2](https://user-images.githubusercontent.com/66868163/185650072-9e99732b-bcda-4c72-8d6d-b8e04a132595.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650072-9e99732b-bcda-4c72-8d6d-b8e04a132595.png">
+</p>
 
 Range-Doppler Map:
 
-![fig3](https://user-images.githubusercontent.com/66868163/185650125-66192f23-ec3c-401e-aa9c-21f1ff87467e.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650125-66192f23-ec3c-401e-aa9c-21f1ff87467e.png">
+</p>
 
 Cell-averaging constant-false-alarm-rate (CA-CFAR) detection result:
 
-![fig4](https://user-images.githubusercontent.com/66868163/185650285-46981394-df12-4500-9448-015fc4679b5d.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650285-46981394-df12-4500-9448-015fc4679b5d.png">
+</p>
 
 Angle estimation spectrum result with Fast Fourier Transform (FFT):
 
-![fig6](https://user-images.githubusercontent.com/66868163/185650616-58612191-d7fc-4ffa-ad4f-a7de2b9c9c1c.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650616-58612191-d7fc-4ffa-ad4f-a7de2b9c9c1c.png">
+</p>
 
 Range-angle map with Fast Fourier Transform (FFT):
 
-![fig5](https://user-images.githubusercontent.com/66868163/185650425-9f06c596-939d-43e3-920b-d4270235a3fc.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650425-9f06c596-939d-43e3-920b-d4270235a3fc.png">
+</p>
 
 Angle estimation spectrum result with MUltiple SIgnal Classification (MUSIC):
 
-![fig7](https://user-images.githubusercontent.com/66868163/185650774-a7b01bc5-43ca-470d-a083-bd459377db12.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650774-a7b01bc5-43ca-470d-a083-bd459377db12.png">
+</p>
 
 Range-angle map with MUltiple SIgnal Classification (MUSIC):
 
-![fig9](https://user-images.githubusercontent.com/66868163/185650845-ea30ccdf-e0f7-42bf-ac7d-5f3d648b4f93.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650845-ea30ccdf-e0f7-42bf-ac7d-5f3d648b4f93.png">
+</p>
 
 Point cloud generation from estimated 3-D coordinates:
 
-![fig8](https://user-images.githubusercontent.com/66868163/185650990-6c3112cd-06f3-4d15-916b-34cf28eb0e5e.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185650990-6c3112cd-06f3-4d15-916b-34cf28eb0e5e.png">
+</p>
 
 ----------
 
