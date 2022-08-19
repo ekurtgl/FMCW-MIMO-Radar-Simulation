@@ -60,5 +60,5 @@ Point cloud generation from estimated 3-D coordinates:
 
 ----------
 
-`FMCW_sim_v2.m` is the main script which reads 3-D coordinates of human skeleton joints captured by Kinect v2 device. For more information about the data capture and skeleton extraction using Kinect, check out the [Kinect repository](https://github.com/ekurtgl/Kinect). This script has not finished yet.
+`FMCW_sim_v2.m` is the main script which reads 3-D coordinates of human skeleton joints captured by Kinect v2 device. For more information about the data capture and skeleton extraction using Kinect, check out the [Kinect repository](https://github.com/ekurtgl/Kinect). This script is still under development.
 
