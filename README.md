@@ -60,13 +60,17 @@ Point cloud generation from estimated 3-D coordinates:
 
 ----------
 
-`FMCW_sim_v2.m` is the main script which reads 3-D coordinates of human skeleton joints captured by Kinect v2 device, and extracts the raw radar data cube (RDC) and plays range-Doppler maps, and outputs the micro-Doppler spectrogram. For more information about the data capture and skeleton extraction using Kinect, check out the [Kinect repository](https://github.com/ekurtgl/Kinect). This script is still under development.
+`FMCW_sim_v2.m` is the main script which reads 3-D coordinates of human skeleton joints captured by Kinect v2 device, and extracts the raw radar data cube (RDC) and plays range-Doppler maps, and outputs the micro-Doppler spectrogram. For more information about the data capture and skeleton extraction using Kinect, check out the [Kinect repository](https://github.com/ekurtgl/Kinect). `This script is still under development!`.
 
 Range-Doppler Map:
 
-![test](https://user-images.githubusercontent.com/66868163/185657077-0aa8f056-e375-4ff4-97c9-b69f897ba2c0.gif)
-
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185657077-0aa8f056-e375-4ff4-97c9-b69f897ba2c0.gif">
+</p>
+
+Micro-Doppler Spectrogram:
+
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185657425-e2e67908-be2e-4113-bb0e-f9c71e9f0f8f.png">
 </p>
 
