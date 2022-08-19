@@ -146,17 +146,29 @@ end
 
 figure
 colormap(jet(256))
-xlabel('Velocity (m/s)');
-ylabel('Range (m)');
 for f = 1:numCPI
     imagesc([-Vmax Vmax], [0 Rmax], 20*log10(abs(RDMs(:,:,1,f))/max(max(abs(RDMs(:,:,1,f))))));
     clim = get(gca,'clim');
     caxis([clim(1)/2 0])
-    title(['Frame ' int2str(f) '/' int2str(numCPI)]);
+%     title(['Frame ' int2str(f) '/' int2str(numCPI)]);
+    xlabel('Velocity (m/s)');
+    ylabel('Range (m)');
+    title(['Range-Doppler Map, Frame: ' int2str(f) '/' int2str(numCPI)]);
+    drawnow;
+    F2(f) = getframe(gcf); % gcf returns the current figure handle
     pause(frameDuration)
-    drawnow
 end
 
+writerObj = VideoWriter('test.avi');
+writerObj.FrameRate = floor(1/frameDuration);
+open(writerObj);
+
+for i=1:length(F2)
+        frame = F2(i) ;
+        writeVideo(writerObj, frame);
+end
+close(writerObj);
+        
 %% micro-Doppler spectrogram
 
 rBin = 1:256;
@@ -171,16 +183,16 @@ colormap(jet(256));
 doppSignMTI = imagesc(timeAxis,[-PRF/2 PRF/2],20*log10(abs(sx2/max(sx2(:)))));
 %     axis xy
 %     set(gca,'FontSize',10)
-% title(['RBin: ',num2str(rBin)]);
+title('micro-Doppler Spectrogram');
 %     title(fOut(end-22:end-4))
-%     xlabel('Time (sec)');
-%     ylabel('Frequency (Hz)');
+xlabel('Time (sec)');
+ylabel('Frequency (Hz)');
 caxis([-45 0]) % 40
 set(gca, 'YDir','normal')
 set(gcf,'color','w');
 %     colorbar;
-axis([0 timeAxis(end) -prf/6 prf/6])
+% axis([0 timeAxis(end) -prf/6 prf/6])
 %     saveas(fig,[fOut(1:end-4) '.fig']);
-set(gca,'xtick',[],'ytick',[])
+% set(gca,'xtick',[],'ytick',[])
 
 

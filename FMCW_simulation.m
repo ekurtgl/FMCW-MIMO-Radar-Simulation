@@ -294,7 +294,7 @@ coor1 = [cfar_ranges(2)*sind(angle1) cfar_ranges(2)*cosd(angle1) 0];
 coor2 = [cfar_ranges(1)*sind(angle2) cfar_ranges(1)*cosd(angle2) 0];
 figure
 hold on;
-title('3D Coordinates of the targets')
+title('3D Coordinates (Point Cloud) of the targets')
 scatter3(coor1(1),coor1(2),coor1(3),100,'m','filled','linewidth',9)
 scatter3(coor2(1),coor2(2),coor2(3),100,'b','filled','linewidth',9)
 xlabel('Range (m) X')
