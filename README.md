@@ -7,7 +7,7 @@
 TX (blue) - RX (red) antenna positions:
 
 <p align="center">
-  <img width="460" height="300" src="http://www.fillmurray.com/460/300](https://user-images.githubusercontent.com/66868163/185649842-fd3723d2-e444-442b-b846-ab9e09415674.png)">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185649842-fd3723d2-e444-442b-b846-ab9e09415674.png">
 </p>
 
 Transmitted, received and downconverted signals:
