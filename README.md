@@ -2,7 +2,7 @@
 
 ## This repository is a simulation frequency modulated continuous wave (FMCW), multiple input multiple output (MIMO) radars.
 
-`FMCW_simulation.m` is the main script which creates point targets at estimates their range, velocity and angle information.
+`FMCW_simulation.m` is the main script which creates point targets and estimates their range, velocity and angle information.
 
 TX (blue) - RX (red) antenna positions:
 
