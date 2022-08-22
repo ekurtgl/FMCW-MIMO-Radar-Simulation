@@ -1,6 +1,6 @@
 # FMCW-MIMO-Radar-Simulation
 
-## This repository is a simulation frequency modulated continuous wave (FMCW), multiple input multiple output (MIMO) radars.
+## This repository is a simulation of frequency modulated continuous wave (FMCW), multiple input multiple output (MIMO) radars.
 
 `FMCW_simulation.m` is the main script which creates point targets and estimates their range, velocity and angle information.
 
