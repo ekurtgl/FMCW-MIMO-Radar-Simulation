@@ -71,6 +71,6 @@ Range-Doppler Map:
 Micro-Doppler Spectrogram:
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/185657425-e2e67908-be2e-4113-bb0e-f9c71e9f0f8f.png">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/186519037-11e4f640-7861-4522-a94c-ad7e95e813e0.png">
 </p>
 
