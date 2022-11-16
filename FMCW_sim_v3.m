@@ -1,6 +1,10 @@
 clear; clc; close all
-
-load('20220817_191142_00.mat');
+fname = '20220817_191142_00';
+path = '/mnt/HDD04/Thesis_final/';
+% fname = 'boulic_data_skel';
+% path = 'C:\Users\emrek\Desktop\Technical\77ghz\FMCW Simulation\';
+datapath = [path fname '.mat'];
+load(datapath);
 %% Radar parameters
 c = physconst('LightSpeed'); %speed of light
 BW = 4e9; %bandwidth
@@ -25,7 +29,7 @@ t_onePulse = 0:dt:dt*numADC-dt;
 % t_onePulse = dt:dt:dt*numADC;
 % t_onePulse = linspace(0, T, numADC);
 numTX = 1;
-numRX = 1;
+numRX = 4;
 Vmax = lambda/(T*4); % Max Unamb velocity m/s
 DFmax = 1/2*PRF; % = Vmax/(c/fc/2); % Max Unamb Dopp Freq
 dR = c/(2*BW); % range resol
@@ -43,21 +47,24 @@ R = 0:dR:Rmax-dR; % range axis
 ang_ax = -90:90; % angle axis
 
 %% Antennas
+radar_loc_bias = -[10,0,2];
 tx_loc = cell(1,numTX);
 for i = 1:numTX
-   tx_loc{i} = [(i-1)*d_tx 0 0];
+   tx_loc{i} = [(i-1)*d_tx 0 0] + radar_loc_bias;
 %    scatter3(tx_loc{i}(1),tx_loc{i}(2),tx_loc{i}(3),'b','filled')
 %    hold on
 end
 
 rx_loc = cell(1,numRX);
 for i = 1:numRX
-   rx_loc{i} = [tx_loc{numTX}(1)+d_tx+(i-1)*d_rx 0 0];
+   rx_loc{i} = [tx_loc{numTX}(1)+d_tx+(i-1)*d_rx 0 0] + radar_loc_bias;
 %    scatter3(rx_loc{i}(1),rx_loc{i}(2),rx_loc{i}(3),'r','filled')
 end
 
 %% Targets
-fps_skel = 30;
+fps_skel = 30; % 30
+target_id = 22;
+% skel_hist = skel_hist(target_id, :, :);
 num_tar = size(skel_hist,1);
 durationx = size(skel_hist,3)/fps_skel;
 numChirps = floor(durationx*NPpF*(1/frameDuration));
@@ -95,7 +102,7 @@ v_avg = mean(vel_hist,2);
 %     cnt = cnt + 1;
 % end
 % 
-% writerObj = VideoWriter('elipsoid.avi');
+% writerObj = VideoWriter([fname '.avi']);
 % writerObj.FrameRate = fps_skel;
 % open(writerObj);
 % 
@@ -116,7 +123,7 @@ for t = 1:num_tar
         end
     end
 end
-dd=delays_targets{3};
+dd=delays_targets{1};
 numChirps = length(dd);
 %% Complex signal
 phase = @(tx,fx) 2*pi*(fx.*tx+slope/2*tx.^2); % transmitted
@@ -166,16 +173,18 @@ end
 % ylabel('Amplitude');
 
 %% Post processing - 2-D FFT
-
+% 
 % RDC = reshape(cat(3,mixed{:}),numADC,numChirps*numCPI,numRX*numTX); % radar data cube
-RDC = reshape(mixed,numADC,numChirps,numRX*numTX);
+% RDC = reshape(mixed,numADC,numChirps,numRX*numTX);
+RDC = reshape(mixed,numTX*numRX,numADC,numChirps);
+RDC = permute(RDC, [2 3 1]);
 numCPI = floor(numChirps/NPpF);
 RDMs = zeros(numADC,NPpF,numTX*numRX,numCPI);
 for i = 1:numCPI
     RD_frame = RDC(:,(i-1)*NPpF+1:i*NPpF,:);
     RDMs(:,:,:,i) = fftshift(fft2(RD_frame,[],[]),2);
 end
-
+% 
 % figure
 % colormap(jet(256))
 % for f = 1:numCPI
@@ -194,7 +203,7 @@ end
 % writerObj = VideoWriter('test.avi');
 % writerObj.FrameRate = floor(1/frameDuration);
 % open(writerObj);
-
+% 
 % for i=1:length(F2)
 %         frame = F2(i) ;
 %         writeVideo(writerObj, frame);
@@ -205,7 +214,9 @@ end
 
 rBin = 1:256;
 nfft = 2^12;window = 256;noverlap = 200;shift = window - noverlap;
-sx = myspecgramnew(sum(fft(RDC(rBin,:,:))),window,nfft,shift); % mti filter and IQ correction
+% nfft = 2^12;window = 1024;noverlap = 1000;shift = window - noverlap;
+sx = myspecgramnew(sum(fft(squeeze(RDC(rBin,:,1)))),window,nfft,shift); % mti filter and IQ correction
+% sx = spectrogram(sum(fft(RDC(rBin,:,:))), window, noverlap, nfft);
 % sx = myspecgramnew(sum(new_mixed(rBin,:)),window,nfft,shift); % mti filter and IQ correction
 sx2 = abs(flipud(fftshift(sx,1)));
 timeAxis = (1:numCPI)*frameDuration; % Time
@@ -224,6 +235,8 @@ caxis([-45 0]) % 40
 set(gca, 'YDir','normal')
 set(gcf,'color','w');
 %     colorbar;
-% axis([0 timeAxis(end) -prf/6 prf/6])
+% axis([0 4 -PRF/2 PRF/2])
 %     saveas(fig,[fOut(1:end-4) '.fig']);
 % set(gca,'xtick',[],'ytick',[])
+frame = frame2im(getframe(gca));
+% imwrite(frame,[fname '.png']);
