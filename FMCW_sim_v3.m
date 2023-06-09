@@ -1,6 +1,6 @@
 clear; clc; close all
 fname = '20220817_191142_00';
-path = '/mnt/HDD04/Thesis_final/';
+path = '';
 % fname = 'boulic_data_skel';
 % path = 'C:\Users\emrek\Desktop\Technical\77ghz\FMCW Simulation\';
 datapath = [path fname '.mat'];
@@ -29,7 +29,7 @@ t_onePulse = 0:dt:dt*numADC-dt;
 % t_onePulse = dt:dt:dt*numADC;
 % t_onePulse = linspace(0, T, numADC);
 numTX = 1;
-numRX = 4;
+numRX = 1;
 Vmax = lambda/(T*4); % Max Unamb velocity m/s
 DFmax = 1/2*PRF; % = Vmax/(c/fc/2); % Max Unamb Dopp Freq
 dR = c/(2*BW); % range resol
@@ -47,7 +47,8 @@ R = 0:dR:Rmax-dR; % range axis
 ang_ax = -90:90; % angle axis
 
 %% Antennas
-radar_loc_bias = -[10,0,2];
+% radar_loc_bias = -[10,0,2];
+radar_loc_bias = [0,0,0];
 tx_loc = cell(1,numTX);
 for i = 1:numTX
    tx_loc{i} = [(i-1)*d_tx 0 0] + radar_loc_bias;
@@ -180,10 +181,10 @@ RDC = reshape(mixed,numTX*numRX,numADC,numChirps);
 RDC = permute(RDC, [2 3 1]);
 numCPI = floor(numChirps/NPpF);
 RDMs = zeros(numADC,NPpF,numTX*numRX,numCPI);
-for i = 1:numCPI
-    RD_frame = RDC(:,(i-1)*NPpF+1:i*NPpF,:);
-    RDMs(:,:,:,i) = fftshift(fft2(RD_frame,[],[]),2);
-end
+% for i = 1:numCPI
+%     RD_frame = RDC(:,(i-1)*NPpF+1:i*NPpF,:);
+%     RDMs(:,:,:,i) = fftshift(fft2(RD_frame,[],[]),2);
+% end
 % 
 % figure
 % colormap(jet(256))
