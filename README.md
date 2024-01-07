@@ -74,3 +74,19 @@ Micro-Doppler Spectrogram:
   <img width="460" height="300" src="https://user-images.githubusercontent.com/66868163/186519037-11e4f640-7861-4522-a94c-ad7e95e813e0.png">
 </p>
 
+# Boulic Model
+`FMCW_sim_v4.m` simulates the Boulic Human Walking Model:
+
+<p align="center">
+  <img width="460" height="300" src="https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation/assets/66868163/18f9ee8d-2f10-4377-b98b-9dc94250912b">
+</p>
+
+<p align="center">
+  <img width="460" height="300" src="https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation/assets/66868163/ff820010-2fc6-4610-9d8f-8594c3c3c40b">
+</p>
+
+# Range-Elevation Map for Real VICON MOCAP Data
+
+<p align="center">
+  <img width="460" height="300" src="https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation/assets/66868163/4f74d752-82a6-43a3-8d81-5091b55efe27">
+</p>
