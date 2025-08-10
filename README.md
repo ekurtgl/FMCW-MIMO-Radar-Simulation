@@ -92,3 +92,17 @@ Micro-Doppler Spectrogram:
 <p align="center">
   <img width="460" height="300" src="https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation/assets/66868163/4f74d752-82a6-43a3-8d81-5091b55efe27">
 </p>
+
+Cite as:
+```
+@software{emre_kurtoglu_2025_16790298,
+  author       = {Emre Kurtoglu},
+  title        = {ekurtgl/FMCW-MIMO-Radar-Simulation: 0.0.0},
+  month        = aug,
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {DOI},
+  doi          = {10.5281/zenodo.16790298},
+  url          = {https://doi.org/10.5281/zenodo.16790298},
+}
+```
