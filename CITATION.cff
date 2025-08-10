@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "FMCW MIMO Radar Simulation"
+message: "If you use this repo, please cite it as below."
+authors:
+  - family-names: "Kurtoglu"
+    given-names: "Emre"
+  - family-names: "Rahman"
+    given-names: "Mahbub"
+doi: 10.5281/zenodo.1234567
+version: 1.0.0
+date-released: 2025-08-09
