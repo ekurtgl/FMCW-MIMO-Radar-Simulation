@@ -1,6 +1,6 @@
 # FMCW-MIMO-Radar-Simulation
 
-[![DOI](https://zenodo.org/badge/526334840.svg)](https://doi.org/10.5281/zenodo.16790297)
+<!-- [![DOI](https://zenodo.org/badge/526334840.svg)](https://doi.org/10.5281/zenodo.16790297) -->
 
 ## This repository is a simulation of frequency modulated continuous wave (FMCW), multiple input multiple output (MIMO) radars.
 
@@ -93,6 +93,7 @@ Micro-Doppler Spectrogram:
   <img width="460" height="300" src="https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation/assets/66868163/4f74d752-82a6-43a3-8d81-5091b55efe27">
 </p>
 
+<!--
 Cite as:
 ```
 @software{emre_kurtoglu_2025_16790298,
@@ -106,3 +107,5 @@ Cite as:
   url          = {https://doi.org/10.5281/zenodo.16790298},
 }
 ```
+
+-->
