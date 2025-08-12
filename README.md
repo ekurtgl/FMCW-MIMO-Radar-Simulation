@@ -4,6 +4,19 @@
 
 ## This repository is a simulation of frequency modulated continuous wave (FMCW), multiple input multiple output (MIMO) radars.
 
+Cite as:
+```
+@misc{kurtoglu2025directionarrivalestimationvirtual,
+      title={Direction of Arrival Estimation with Virtual Antenna Array Using FMCW Radar Simulated Data}, 
+      author={Emre Kurtoglu and Mohammad Mahbubur Rahman},
+      year={2025},
+      eprint={2508.07513},
+      archivePrefix={arXiv},
+      primaryClass={eess.SP},
+      url={https://arxiv.org/abs/2508.07513}, 
+}
+```
+
 `FMCW_simulation.m` is the main script which creates point targets and estimates their range, velocity and angle information.
 
 TX (blue) - RX (red) antenna positions:
