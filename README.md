@@ -4,29 +4,6 @@
 
 ## This repository is a simulation of frequency modulated continuous wave (FMCW), multiple input multiple output (MIMO) radars.
 
-Cite as:
-```
-@software{kurtoglu2025fmcw,
-  author       = {Emre Kurtoglu and Mohammad Mahbubur Rahman},
-  title        = {{FMCW-MIMO-Radar-Simulation}},
-  year         = {2025},
-  publisher    = {Zenodo},
-  version      = {latest},
-  doi          = {10.5281/zenodo.16790297},
-  url          = {https://doi.org/10.5281/zenodo.16790297}
-}
-
-@misc{kurtoglu2025directionarrivalestimationvirtual,
-      title={Direction of Arrival Estimation with Virtual Antenna Array Using FMCW Radar Simulated Data}, 
-      author={Emre Kurtoglu and Mohammad Mahbubur Rahman},
-      year={2025},
-      eprint={2508.07513},
-      archivePrefix={arXiv},
-      primaryClass={eess.SP},
-      url={https://arxiv.org/abs/2508.07513}, 
-}
-```
-
 `FMCW_simulation.m` is the main script which creates point targets and estimates their range, velocity and angle information.
 
 TX (blue) - RX (red) antenna positions:
@@ -116,19 +93,25 @@ Micro-Doppler Spectrogram:
   <img width="460" height="300" src="https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation/assets/66868163/4f74d752-82a6-43a3-8d81-5091b55efe27">
 </p>
 
-<!--
-Cite as:
+**Cite as:**
 ```
-@software{emre_kurtoglu_2025_16790298,
-  author       = {Emre Kurtoglu},
-  title        = {ekurtgl/FMCW-MIMO-Radar-Simulation: 0.0.0},
-  month        = aug,
-  year         = 2025,
+@software{kurtoglu2025fmcw,
+  author       = {Emre Kurtoglu  and Mohammad Mahbubur Rahman},
+  title        = {{FMCW-MIMO-Radar-Simulation}},
+  year         = {2025},
   publisher    = {Zenodo},
-  version      = {DOI},
-  doi          = {10.5281/zenodo.16790298},
-  url          = {https://doi.org/10.5281/zenodo.16790298},
+  version      = {latest},
+  doi          = {10.5281/zenodo.16790297},
+  url          = {https://doi.org/10.5281/zenodo.16790297}
+}
+
+@misc{kurtoglu2025directionarrivalestimationvirtual,
+      title={Direction of Arrival Estimation with Virtual Antenna Array Using FMCW Radar Simulated Data}, 
+      author={Emre Kurtoglu and Mohammad Mahbubur Rahman},
+      year={2025},
+      eprint={2508.07513},
+      archivePrefix={arXiv},
+      primaryClass={eess.SP},
+      url={https://arxiv.org/abs/2508.07513}, 
 }
 ```
-
--->
