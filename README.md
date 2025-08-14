@@ -93,8 +93,7 @@ Micro-Doppler Spectrogram:
   <img width="460" height="300" src="https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation/assets/66868163/4f74d752-82a6-43a3-8d81-5091b55efe27">
 </p>
 
-**Cite as:**
-```
+<!--
 @software{kurtoglu2025fmcw,
   author       = {Emre Kurtoglu  and Mohammad Mahbubur Rahman},
   title        = {{FMCW-MIMO-Radar-Simulation}},
@@ -103,6 +102,19 @@ Micro-Doppler Spectrogram:
   version      = {latest},
   doi          = {10.5281/zenodo.16790297},
   url          = {https://doi.org/10.5281/zenodo.16790297}
+}
+-->
+
+**Cite as:**
+```
+@software{kurtoglu2022fmcw,
+  title        = {FMCW MIMO Radar Simulation},
+  author       = {Kurtoglu, Emre and Rahman, Mohammad Mahbubur},
+  year         = {2022},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.16790297},
+  url          = {https://github.com/ekurtgl/FMCW-MIMO-Radar-Simulation},
+  note         = {Also available at: https://doi.org/10.5281/zenodo.16790297}
 }
 
 @misc{kurtoglu2025directionarrivalestimationvirtual,
