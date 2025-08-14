@@ -6,6 +6,16 @@
 
 Cite as:
 ```
+@software{kurtoglu2025fmcw,
+  author       = {Emre Kurtoglu and Mohammad Mahbubur Rahman},
+  title        = {{FMCW-MIMO-Radar-Simulation}},
+  year         = {2025},
+  publisher    = {Zenodo},
+  version      = {latest},
+  doi          = {10.5281/zenodo.16790297},
+  url          = {https://doi.org/10.5281/zenodo.16790297}
+}
+
 @misc{kurtoglu2025directionarrivalestimationvirtual,
       title={Direction of Arrival Estimation with Virtual Antenna Array Using FMCW Radar Simulated Data}, 
       author={Emre Kurtoglu and Mohammad Mahbubur Rahman},
